@@ -1,0 +1,12 @@
+/Users/yllka/Labproject/Domain/bin/Debug/net5.0/Domain.deps.json
+/Users/yllka/Labproject/Domain/bin/Debug/net5.0/Domain.dll
+/Users/yllka/Labproject/Domain/bin/Debug/net5.0/ref/Domain.dll
+/Users/yllka/Labproject/Domain/bin/Debug/net5.0/Domain.pdb
+/Users/yllka/Labproject/Domain/obj/Debug/net5.0/Domain.csproj.AssemblyReference.cache
+/Users/yllka/Labproject/Domain/obj/Debug/net5.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yllka/Labproject/Domain/obj/Debug/net5.0/Domain.AssemblyInfoInputs.cache
+/Users/yllka/Labproject/Domain/obj/Debug/net5.0/Domain.AssemblyInfo.cs
+/Users/yllka/Labproject/Domain/obj/Debug/net5.0/Domain.csproj.CoreCompileInputs.cache
+/Users/yllka/Labproject/Domain/obj/Debug/net5.0/Domain.dll
+/Users/yllka/Labproject/Domain/obj/Debug/net5.0/ref/Domain.dll
+/Users/yllka/Labproject/Domain/obj/Debug/net5.0/Domain.pdb

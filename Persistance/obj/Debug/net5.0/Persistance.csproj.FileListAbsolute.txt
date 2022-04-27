@@ -1,0 +1,15 @@
+/Users/yllka/Labproject/Persistance/bin/Debug/net5.0/Persistance.deps.json
+/Users/yllka/Labproject/Persistance/bin/Debug/net5.0/Persistance.dll
+/Users/yllka/Labproject/Persistance/bin/Debug/net5.0/ref/Persistance.dll
+/Users/yllka/Labproject/Persistance/bin/Debug/net5.0/Persistance.pdb
+/Users/yllka/Labproject/Persistance/bin/Debug/net5.0/Domain.dll
+/Users/yllka/Labproject/Persistance/bin/Debug/net5.0/Domain.pdb
+/Users/yllka/Labproject/Persistance/obj/Debug/net5.0/Persistance.csproj.AssemblyReference.cache
+/Users/yllka/Labproject/Persistance/obj/Debug/net5.0/Persistance.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yllka/Labproject/Persistance/obj/Debug/net5.0/Persistance.AssemblyInfoInputs.cache
+/Users/yllka/Labproject/Persistance/obj/Debug/net5.0/Persistance.AssemblyInfo.cs
+/Users/yllka/Labproject/Persistance/obj/Debug/net5.0/Persistance.csproj.CoreCompileInputs.cache
+/Users/yllka/Labproject/Persistance/obj/Debug/net5.0/Persistance.csproj.CopyComplete
+/Users/yllka/Labproject/Persistance/obj/Debug/net5.0/Persistance.dll
+/Users/yllka/Labproject/Persistance/obj/Debug/net5.0/ref/Persistance.dll
+/Users/yllka/Labproject/Persistance/obj/Debug/net5.0/Persistance.pdb
