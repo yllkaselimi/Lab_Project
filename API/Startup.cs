@@ -26,7 +26,7 @@ namespace API
         }
 
         
-        //learning git
+        
 
         // This method gets called by the runtime. Use this method to add services to the container.
 
@@ -45,7 +45,7 @@ namespace API
             });
             services.AddDbContext<DataContext>(opt =>
             {
-                opt.UseSqlite(config.GetConnectionString("DefaultConnetion"));
+                opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
              // then what we want to do is go and add the default connetction so we got 
              // to the app.settingsdev.json ==> go there lol.. there we write our connection string
             

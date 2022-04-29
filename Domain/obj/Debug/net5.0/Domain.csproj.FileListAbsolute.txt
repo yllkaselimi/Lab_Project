@@ -10,3 +10,15 @@
 /Users/yllka/Labproject/Domain/obj/Debug/net5.0/Domain.dll
 /Users/yllka/Labproject/Domain/obj/Debug/net5.0/ref/Domain.dll
 /Users/yllka/Labproject/Domain/obj/Debug/net5.0/Domain.pdb
+/Users/yllka/Desktop/Labproject copy/Domain/bin/Debug/net5.0/Domain.deps.json
+/Users/yllka/Desktop/Labproject copy/Domain/bin/Debug/net5.0/Domain.dll
+/Users/yllka/Desktop/Labproject copy/Domain/bin/Debug/net5.0/ref/Domain.dll
+/Users/yllka/Desktop/Labproject copy/Domain/bin/Debug/net5.0/Domain.pdb
+/Users/yllka/Desktop/Labproject copy/Domain/obj/Debug/net5.0/Domain.csproj.AssemblyReference.cache
+/Users/yllka/Desktop/Labproject copy/Domain/obj/Debug/net5.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yllka/Desktop/Labproject copy/Domain/obj/Debug/net5.0/Domain.AssemblyInfoInputs.cache
+/Users/yllka/Desktop/Labproject copy/Domain/obj/Debug/net5.0/Domain.AssemblyInfo.cs
+/Users/yllka/Desktop/Labproject copy/Domain/obj/Debug/net5.0/Domain.csproj.CoreCompileInputs.cache
+/Users/yllka/Desktop/Labproject copy/Domain/obj/Debug/net5.0/Domain.dll
+/Users/yllka/Desktop/Labproject copy/Domain/obj/Debug/net5.0/ref/Domain.dll
+/Users/yllka/Desktop/Labproject copy/Domain/obj/Debug/net5.0/Domain.pdb

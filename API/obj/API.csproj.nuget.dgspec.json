@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/yllka/Labproject/API/API.csproj": {}
+    "/Users/yllka/Desktop/Labproject copy/API/API.csproj": {}
   },
   "projects": {
-    "/Users/yllka/Labproject/API/API.csproj": {
+    "/Users/yllka/Desktop/Labproject copy/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/yllka/Labproject/API/API.csproj",
+        "projectUniqueName": "/Users/yllka/Desktop/Labproject copy/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/yllka/Labproject/API/API.csproj",
+        "projectPath": "/Users/yllka/Desktop/Labproject copy/API/API.csproj",
         "packagesPath": "/Users/yllka/.nuget/packages/",
-        "outputPath": "/Users/yllka/Labproject/API/obj/",
+        "outputPath": "/Users/yllka/Desktop/Labproject copy/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/yllka/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/yllka/Labproject/Application/Application.csproj": {
-                "projectPath": "/Users/yllka/Labproject/Application/Application.csproj"
+              "/Users/yllka/Desktop/Labproject copy/Application/Application.csproj": {
+                "projectPath": "/Users/yllka/Desktop/Labproject copy/Application/Application.csproj"
               }
             }
           }
@@ -42,6 +42,12 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -69,14 +75,14 @@
         }
       }
     },
-    "/Users/yllka/Labproject/Application/Application.csproj": {
+    "/Users/yllka/Desktop/Labproject copy/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/yllka/Labproject/Application/Application.csproj",
+        "projectUniqueName": "/Users/yllka/Desktop/Labproject copy/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "/Users/yllka/Labproject/Application/Application.csproj",
+        "projectPath": "/Users/yllka/Desktop/Labproject copy/Application/Application.csproj",
         "packagesPath": "/Users/yllka/.nuget/packages/",
-        "outputPath": "/Users/yllka/Labproject/Application/obj/",
+        "outputPath": "/Users/yllka/Desktop/Labproject copy/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/yllka/.nuget/NuGet/NuGet.Config"
@@ -91,11 +97,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/yllka/Labproject/Domain/Domain.csproj": {
-                "projectPath": "/Users/yllka/Labproject/Domain/Domain.csproj"
+              "/Users/yllka/Desktop/Labproject copy/Domain/Domain.csproj": {
+                "projectPath": "/Users/yllka/Desktop/Labproject copy/Domain/Domain.csproj"
               },
-              "/Users/yllka/Labproject/Persistance/Persistance.csproj": {
-                "projectPath": "/Users/yllka/Labproject/Persistance/Persistance.csproj"
+              "/Users/yllka/Desktop/Labproject copy/Persistance/Persistance.csproj": {
+                "projectPath": "/Users/yllka/Desktop/Labproject copy/Persistance/Persistance.csproj"
               }
             }
           }
@@ -128,14 +134,14 @@
         }
       }
     },
-    "/Users/yllka/Labproject/Domain/Domain.csproj": {
+    "/Users/yllka/Desktop/Labproject copy/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/yllka/Labproject/Domain/Domain.csproj",
+        "projectUniqueName": "/Users/yllka/Desktop/Labproject copy/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/Users/yllka/Labproject/Domain/Domain.csproj",
+        "projectPath": "/Users/yllka/Desktop/Labproject copy/Domain/Domain.csproj",
         "packagesPath": "/Users/yllka/.nuget/packages/",
-        "outputPath": "/Users/yllka/Labproject/Domain/obj/",
+        "outputPath": "/Users/yllka/Desktop/Labproject copy/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/yllka/.nuget/NuGet/NuGet.Config"
@@ -180,14 +186,14 @@
         }
       }
     },
-    "/Users/yllka/Labproject/Persistance/Persistance.csproj": {
+    "/Users/yllka/Desktop/Labproject copy/Persistance/Persistance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/yllka/Labproject/Persistance/Persistance.csproj",
+        "projectUniqueName": "/Users/yllka/Desktop/Labproject copy/Persistance/Persistance.csproj",
         "projectName": "Persistance",
-        "projectPath": "/Users/yllka/Labproject/Persistance/Persistance.csproj",
+        "projectPath": "/Users/yllka/Desktop/Labproject copy/Persistance/Persistance.csproj",
         "packagesPath": "/Users/yllka/.nuget/packages/",
-        "outputPath": "/Users/yllka/Labproject/Persistance/obj/",
+        "outputPath": "/Users/yllka/Desktop/Labproject copy/Persistance/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/yllka/.nuget/NuGet/NuGet.Config"
@@ -202,8 +208,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/yllka/Labproject/Domain/Domain.csproj": {
-                "projectPath": "/Users/yllka/Labproject/Domain/Domain.csproj"
+              "/Users/yllka/Desktop/Labproject copy/Domain/Domain.csproj": {
+                "projectPath": "/Users/yllka/Desktop/Labproject copy/Domain/Domain.csproj"
               }
             }
           }

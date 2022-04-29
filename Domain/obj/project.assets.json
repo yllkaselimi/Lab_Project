@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/yllka/Labproject/Domain/Domain.csproj",
+      "projectUniqueName": "/Users/yllka/Desktop/Labproject copy/Domain/Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "/Users/yllka/Labproject/Domain/Domain.csproj",
+      "projectPath": "/Users/yllka/Desktop/Labproject copy/Domain/Domain.csproj",
       "packagesPath": "/Users/yllka/.nuget/packages/",
-      "outputPath": "/Users/yllka/Labproject/Domain/obj/",
+      "outputPath": "/Users/yllka/Desktop/Labproject copy/Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/yllka/.nuget/NuGet/NuGet.Config"

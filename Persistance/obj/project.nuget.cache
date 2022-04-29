@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d6YXfCMagxwE+eujm7QYyZ5ak0n06nzTmpnKSnO/d8qjj98r6RITzv/cMPDCjRhWg7/iIaCWNIDm4s0x13XGog==",
+  "dgSpecHash": "ZD1F2opcLRNNKDkA9sivw4a633+szchY5JmVlm6mjO+Zp1f9u3fW6StdpCoYLw9Q0p+wLf5XrFcn0cBvPLiPbw==",
   "success": true,
-  "projectFilePath": "/Users/yllka/Labproject/Persistance/Persistance.csproj",
+  "projectFilePath": "/Users/yllka/Desktop/Labproject copy/Persistance/Persistance.csproj",
   "expectedPackageFiles": [
     "/Users/yllka/.nuget/packages/microsoft.data.sqlite.core/5.0.16/microsoft.data.sqlite.core.5.0.16.nupkg.sha512",
     "/Users/yllka/.nuget/packages/microsoft.dotnet.platformabstractions/3.1.6/microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
