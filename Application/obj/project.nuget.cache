@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NaQ/CgIsvN/PBiwXbScAjd36zku+QKdcerUh9AxLonBNFoDblthZVFFrelR2je8Q0l+1jgEpH1cYbOCLsn4ugw==",
+  "dgSpecHash": "Ip3VdSj2urlIYK8TOS9U5BEU43EjM7bs0y06r90fpZ8lv0NqnhaxCt9CfflqN6nx8bu7SojVmMoPFiZEpEE+Lw==",
   "success": true,
-  "projectFilePath": "/Users/yllka/Labproject/Application/Application.csproj",
+  "projectFilePath": "/Users/yllka/Desktop/Labproject copy/Application/Application.csproj",
   "expectedPackageFiles": [
     "/Users/yllka/.nuget/packages/microsoft.data.sqlite.core/5.0.16/microsoft.data.sqlite.core.5.0.16.nupkg.sha512",
     "/Users/yllka/.nuget/packages/microsoft.dotnet.platformabstractions/3.1.6/microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",

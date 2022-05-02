@@ -958,11 +958,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/yllka/Labproject/Persistance/Persistance.csproj",
+      "projectUniqueName": "/Users/yllka/Desktop/Labproject copy/Persistance/Persistance.csproj",
       "projectName": "Persistance",
-      "projectPath": "/Users/yllka/Labproject/Persistance/Persistance.csproj",
+      "projectPath": "/Users/yllka/Desktop/Labproject copy/Persistance/Persistance.csproj",
       "packagesPath": "/Users/yllka/.nuget/packages/",
-      "outputPath": "/Users/yllka/Labproject/Persistance/obj/",
+      "outputPath": "/Users/yllka/Desktop/Labproject copy/Persistance/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/yllka/.nuget/NuGet/NuGet.Config"
@@ -977,8 +977,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/yllka/Labproject/Domain/Domain.csproj": {
-              "projectPath": "/Users/yllka/Labproject/Domain/Domain.csproj"
+            "/Users/yllka/Desktop/Labproject copy/Domain/Domain.csproj": {
+              "projectPath": "/Users/yllka/Desktop/Labproject copy/Domain/Domain.csproj"
             }
           }
         }
