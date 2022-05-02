@@ -25,16 +25,13 @@ namespace API
       
         }
 
-        
-        
-
         // This method gets called by the runtime. Use this method to add services to the container.
 
         // Inside our configure services this is where we want to add our data context
         // and we will do it add
         // services.AddDbCOntext which we get from entity  framework and then inside our angle brackets
-        //we specify the type which is data context, and inside there we are going to add some parameters
-        //and the option we wanna pass is going to tell which database server we are using
+        // we specify the type which is data context, and inside there we are going to add some parameters
+        // and the option we wanna pass is going to tell which database server we are using
         public void ConfigureServices(IServiceCollection services)
         {
 
@@ -68,8 +65,7 @@ namespace API
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
+            app.UseEndpoints(endpoints => {
                 endpoints.MapControllers();
             });
         }

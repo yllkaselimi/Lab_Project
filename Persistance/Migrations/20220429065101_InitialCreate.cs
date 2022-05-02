@@ -5,6 +5,7 @@ namespace Persistance.Migrations
 {
     public partial class InitialCreate : Migration
     {
+        // the up method is what we use to create our database
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -24,6 +25,8 @@ namespace Persistance.Migrations
                 });
         }
 
+        // we also have the down method that we use when we want to go to 
+        // an earlier migration, we drop this particular table.
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
