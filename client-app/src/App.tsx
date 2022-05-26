@@ -17,6 +17,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <p >Yllka Lab Hello</p>
         <ul>
           {activities.map((activity: any) => (
             <li key ={activity.id}>

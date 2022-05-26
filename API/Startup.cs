@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Activities;
+using Application.Core;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -15,6 +16,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Persistance;
+
 
 namespace API
 { 
@@ -29,8 +31,7 @@ namespace API
 
         // This method gets called by the runtime. Use this method to add services to the container.
 
-        // Inside our configure services this is where we want to add our data context
-        // and we will do it add
+        // Inside our configure services this is where we want to add our data context and we will do it add
         // services.AddDbCOntext which we get from entity  framework and then inside our angle brackets
         // we specify the type which is data context, and inside there we are going to add some parameters
         // and the option we wanna pass is going to tell which database server we are using
@@ -58,6 +59,7 @@ namespace API
                 });
 
                 services.AddMediatR(typeof(List.Handler).Assembly);
+                services.AddAutoMapper(typeof(MappingProfiles).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

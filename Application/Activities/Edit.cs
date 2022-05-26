@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
 using Domain;
 using MediatR;
 using Persistance;
@@ -19,16 +20,24 @@ namespace Application.Activities
         public class Hanndler : IRequestHandler<Command>
         {
         private readonly DataContext context;
-            public Hanndler(DataContext context)
+        private readonly IMapper mapper;
+            public Hanndler(DataContext context, IMapper mapper)
             {
+            this.mapper = mapper;
             this.context = context;
             }
 
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
             {
                 var activity = await context.Activities.FindAsync(request.Activity.id);
+                // instead of setting each property manually like this
+                //activity.Title = request.Activity.Title ?? activity.Title;
+                // we use automapper
 
-                activity.Title = request.Activity.Title ?? activity.Title;
+                mapper.Map(request.Activity, activity);
+
+                // so now when we do update our activity we update every field
+                // so it wont take a lot of manual writing code
 
                 await context.SaveChangesAsync();
 
