@@ -69,3 +69,4 @@
 /Users/yllka/Desktop/Labproject copy/API/bin/Debug/net5.0/Microsoft.Extensions.Options.dll
 /Users/yllka/Desktop/Labproject copy/API/bin/Debug/net5.0/Microsoft.Extensions.Primitives.dll
 /Users/yllka/Desktop/Labproject copy/API/bin/Debug/net5.0/System.Runtime.CompilerServices.Unsafe.dll
+/Users/yllka/Desktop/Labproject copy/API/bin/Debug/net5.0/package-lock.json
