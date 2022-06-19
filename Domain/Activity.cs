@@ -15,7 +15,8 @@ namespace Domain
        public DateTime Date { get; set; }
        public string Duration { get; set; }
        public string EventCoordinator { get; set; }
-       public int NumberOfParticipants{ get; set; }
+       public int NumberOfParticipants { get; set; }
+       
        
     }
 }

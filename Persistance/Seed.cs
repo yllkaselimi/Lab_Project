@@ -25,6 +25,8 @@ namespace Persistance
                     Duration = "1 Hour",
                     EventCoordinator = "Yllka Selimi",
                     NumberOfParticipants = 20,
+                
+                 
                 },
            new Activity
                 {
@@ -33,6 +35,7 @@ namespace Persistance
                     Duration = "1 Hour",
                     EventCoordinator = "Elisa Bruci",
                     NumberOfParticipants = 25,
+                   
                 },
               new Activity
                 {
@@ -41,6 +44,8 @@ namespace Persistance
                     Duration = "45 min",
                     EventCoordinator = "Rita Selimi",
                     NumberOfParticipants = 30,
+           
+
                 },
                new Activity
                 {
@@ -49,6 +54,7 @@ namespace Persistance
                     Duration = "30 min",
                     EventCoordinator = "Viola Bugaqku",
                     NumberOfParticipants = 15,
+              
                 },
                new Activity
                 {
@@ -57,6 +63,7 @@ namespace Persistance
                     Duration = "1 hour",
                     EventCoordinator = "Tuana Bekteshi",
                     NumberOfParticipants = 30,
+              
                 },
 
                  new Activity
@@ -66,6 +73,8 @@ namespace Persistance
                     Duration = "1 hour",
                     EventCoordinator = "Eda Shefiti",
                     NumberOfParticipants = 25,
+
+
                 },
                     new Activity
                 {
@@ -74,6 +83,7 @@ namespace Persistance
                     Duration = "1 hour",
                     EventCoordinator = "Anda Selimi",
                     NumberOfParticipants = 35,
+
                 },
 
             };

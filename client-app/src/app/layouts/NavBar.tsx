@@ -3,6 +3,7 @@ import { Button, Container, Menu } from 'semantic-ui-react'
     
 function NavBar() {
     return (
+        
         <Menu inverted fixed='top'>
             <Container>
                 <Menu.Item header>

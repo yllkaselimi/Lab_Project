@@ -1,15 +1,18 @@
 body {
   background-color: #f8f8ff !important;
+
 }
 
 #root{
   height: 100%;
+  margin-top: 100px;
 }
 
 .ui.inverted.top.fixed.menu {
   background-color: #161b22;
   border-bottom: 2px solid #8F00FF;
   height: 60px;
+
 }
 
 #body{
@@ -21,3 +24,10 @@ body {
 li{
   color: #f0ead6;
 }
+
+
+
+
+
+
+
