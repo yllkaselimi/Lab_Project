@@ -38,10 +38,10 @@ export default function ActivityForm({activity: selectedActivity, closeForm, cre
         <Segment clearing>
             <Form onSubmit={handleSubmit} autoComplete='off'>
                 <Form.Input placeholder='Title' value={activity.title} name='title' onChange={handleInputChange}/>
-                <Form.Input placeholder='Date' value={activity.date} name='Date' onChange={handleInputChange}/>
-                <Form.Input placeholder='Duration' value={activity.duration} name='Duration' onChange={handleInputChange}/>
-                <Form.Input placeholder='EventCoordinator' value={activity.eventCoordinator} name='Event Coordinator' onChange={handleInputChange}/>
-                <Form.Input placeholder='NumberOfParticipants' value={activity.numberOfParticipants} name='Number of Participants' onChange={handleInputChange}/>
+                <Form.Input placeholder='Date' value={activity.date} name='date' onChange={handleInputChange}/>
+                <Form.Input placeholder='Duration' value={activity.duration} name='duration' onChange={handleInputChange}/>
+                <Form.Input placeholder='EventCoordinator' value={activity.eventCoordinator} name='eventCoordinator' onChange={handleInputChange}/>
+                <Form.Input placeholder='NumberOfParticipants' value={activity.numberOfParticipants} name='numberOfParticipants' onChange={handleInputChange}/>
                 <Button floated='right' positive type='submit' content='Submit'/>
                 <Button onClick={closeForm} floated='right' type='button' content='Cancel' />
             </Form>
