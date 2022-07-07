@@ -13,19 +13,17 @@ export default function ActivityDetails({activity, cancelSelectActivity, openFor
      
     return(
         <Card fluid>
-            <image></image>
             <Card.Content>
             <Card.Header>{activity.title}</Card.Header>
             <Card.Meta>
                 <span>{activity.date}</span>
             </Card.Meta>
             <Card.Description>
-                {activity.description}
                 Insert Description
             </Card.Description>
             </Card.Content>
             <Card.Content extra>
-                <Button onCLick={() => openForm(activity.id)} basic color='violet' content='Edit' />
+                <Button onClick={() => openForm(activity.id)} basic color='violet' content='Edit' />
                 <Button onClick={cancelSelectActivity} basic color='violet' content='Cancel'/>
 
             </Card.Content>
