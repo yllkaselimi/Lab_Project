@@ -25,7 +25,7 @@ export default function ActivityList({activities, selectActivity, deleteActivity
                             </Item.Description>
                             <Item.Extra>
                                 <Button onClick={() => selectActivity(activity.id)} floated='right' content='View' color='violet'/>
-                                <Button onClick={() => deleteActivity(activity.id)} floated='right' content='Delete' color='pink'/>
+                                <Button onClick={() => deleteActivity(activity.id)} floated='right' content='Delete' />
                             </Item.Extra>
                         </Item.Content>
                     </Item>

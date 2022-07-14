@@ -1,26 +1,35 @@
 import React from 'react'
 import { Button, Container, Menu } from 'semantic-ui-react'
 
+
+
 interface Props {
     openForm: () => void;
 }
     
 export default function NavBar({openForm} : Props) {
     return (
-        
+    
         <Menu inverted fixed='top'>
             <Container>
                 <Menu.Item header>
                     <img src="/images/death-star.png" alt="logo" style={{marginRight: '10px'}}/>
                     FitnessStar
                 </Menu.Item>
-                <Menu.Item name='Activities'/> 
-                    
+                
+                <Menu.Item name='Activities'/>
                 <Menu.Item> 
-                    <Button onClick={openForm} positive content='Create Activity'/>
+                  
+                    <Button onClick={openForm} content='Create Activity' color='violet'/>
+                    
+                    
+          
+                   
                 </Menu.Item>
             </Container>
         </Menu>
+  
+    
     )
 }
 

@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { Activity } from '../models/activity';
 import './styles.css';
 import NavBar from './NavBar';
 import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard';
 import { Container } from 'semantic-ui-react';
 import {v4 as uuid} from 'uuid';
+import {ActivitiesService} from '../api/agent';
 
 
 function App() {
   const [activities, setActivities] = useState<Activity[]>([]);
   const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined); 
   const [editMode, setEditMode] = useState(false);
-  
+  const [submitting, setSubmitting] = useState(false);
+
 
   useEffect(() => {
-    axios.get(`/getAll`).then(response =>{ 
+    ActivitiesService.Activities.list().then((response: any) =>{ 
       console.log('RESPONSE YLLKA: ', response); 
-      setActivities(response.data);
+      setActivities(response);
     })
   }, [])
 
@@ -40,21 +41,38 @@ function App() {
   }
 
   function handleCreateOrEditActivity(activity: Activity){
-    activity.id 
-    ? setActivities([...activities.filter(x => x.id !== activity.id), activity ])
-    : setActivities([...activities, {...activity, id: uuid()}]);
-    setEditMode(false);
-    setSelectedActivity(activity);
+    setSubmitting(true);
+    if(activity.id) {
+      ActivitiesService.Activities.update(activity).then(() => {
+      setActivities([...activities.filter(x => x.id !== activity.id), activity ])
+      setSelectedActivity(activity);
+      setEditMode(false);
+      setSubmitting(false);
+    
+      })
+    } else {
+      activity.id = uuid();
+      ActivitiesService.Activities.create(activity).then(() => {
+      setActivities([...activities, activity]);
+      setSelectedActivity(activity);
+      setEditMode(false);
+      setSubmitting(false);
+      })
+    }
   }
 
   function handleDeleteActivity(id: string) {
+    const response = ActivitiesService.deleteActivity(id);
+    console.log('Response: ', response);
     setActivities([...activities.filter(x => x.id !== id)])
   }
 
 
   
   return (
+ 
     <>
+      
       <NavBar openForm={handleFormOpen}/>
         <Container>
      <ActivityDashboard 
@@ -67,12 +85,18 @@ function App() {
      closeForm={handleFormClose}
      createOrEdit={handleCreateOrEditActivity}
      deleteActivity={handleDeleteActivity}
+     submitting={submitting}
      />
      </Container>
 
+
     </>
+    
+
+  
   );
   } 
+ 
 
 
 
