@@ -14,7 +14,7 @@ namespace Persistance.Migrations
                 {
                     id = table.Column<Guid>(type: "TEXT", nullable: false),
                     Title = table.Column<string>(type: "TEXT", nullable: true),
-                    Date = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Date = table.Column<string>(type: "TEXT", nullable: false),
                     Duration = table.Column<string>(type: "TEXT", nullable: true),
                     EventCoordinator = table.Column<string>(type: "TEXT", nullable: true),
                     NumberOfParticipants = table.Column<int>(type: "INTEGER", nullable: false)

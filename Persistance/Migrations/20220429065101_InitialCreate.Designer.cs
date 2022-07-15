@@ -24,7 +24,7 @@ namespace Persistance.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<string>("Date")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Duration")

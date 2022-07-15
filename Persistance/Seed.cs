@@ -21,7 +21,7 @@ namespace Persistance
                 new Activity
                 {
                     Title = "KickBox",
-                    Date = DateTime.Now.AddMonths(1),
+                    Date = "30/12/2022",
                     Duration = "1 Hour",
                     EventCoordinator = "Yllka Selimi",
                     NumberOfParticipants = 20,
@@ -31,7 +31,7 @@ namespace Persistance
            new Activity
                 {
                     Title = "Pilates",
-                    Date = DateTime.Now.AddMonths(1),
+                    Date = "30/12/2022",
                     Duration = "1 Hour",
                     EventCoordinator = "Elisa Bruci",
                     NumberOfParticipants = 25,
@@ -40,7 +40,7 @@ namespace Persistance
               new Activity
                 {
                     Title = "KangooJump",
-                    Date = DateTime.Now.AddMonths(1),
+                    Date = "30/12/2022",
                     Duration = "45 min",
                     EventCoordinator = "Rita Selimi",
                     NumberOfParticipants = 30,
@@ -50,7 +50,7 @@ namespace Persistance
                new Activity
                 {
                     Title = "WeightTraining",
-                    Date = DateTime.Now.AddMonths(1),
+                    Date = "30/12/2022",
                     Duration = "30 min",
                     EventCoordinator = "Viola Bugaqku",
                     NumberOfParticipants = 15,
@@ -59,7 +59,7 @@ namespace Persistance
                new Activity
                 {
                     Title = "Yoga",
-                    Date = DateTime.Now.AddMonths(1),
+                    Date = "30/12/2022",
                     Duration = "1 hour",
                     EventCoordinator = "Tuana Bekteshi",
                     NumberOfParticipants = 30,
@@ -69,7 +69,7 @@ namespace Persistance
                  new Activity
                 {
                     Title = "CycleBar",
-                    Date = DateTime.Now.AddMonths(1),
+                    Date = "30/12/2022",
                     Duration = "1 hour",
                     EventCoordinator = "Eda Shefiti",
                     NumberOfParticipants = 25,
@@ -79,7 +79,7 @@ namespace Persistance
                     new Activity
                 {
                     Title = "CrossFit",
-                    Date = DateTime.Now.AddMonths(1),
+                    Date = "30/12/2022",
                     Duration = "1 hour",
                     EventCoordinator = "Anda Selimi",
                     NumberOfParticipants = 35,

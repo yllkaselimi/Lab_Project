@@ -13,6 +13,7 @@ function App() {
   const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined); 
   const [editMode, setEditMode] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [signUp, setSignUp] = useState(false);
 
 
   useEffect(() => {
@@ -34,6 +35,14 @@ function App() {
     id? handleSelectActivity(id) : handleCancelSelectActivity();
     setEditMode(true);
 
+  }
+
+  function handleSignUp(){
+    setSignUp(true);
+  }
+
+  function handleSignUpClose(){
+    setSignUp(false);
   }
 
   function handleFormClose() {
@@ -73,7 +82,7 @@ function App() {
  
     <>
       
-      <NavBar openForm={handleFormOpen}/>
+      <NavBar openForm={handleFormOpen} signUp={handleSignUp} />
         <Container>
      <ActivityDashboard 
      activities={activities} 
@@ -85,7 +94,8 @@ function App() {
      closeForm={handleFormClose}
      createOrEdit={handleCreateOrEditActivity}
      deleteActivity={handleDeleteActivity}
-     submitting={submitting}
+     signUp={signUp}
+     handleSignUpClose={handleSignUpClose}
      />
      </Container>
 

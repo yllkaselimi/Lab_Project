@@ -12,7 +12,7 @@ namespace Domain
 
        public Guid id { get; set; } 
        public string Title { get; set; }
-       public DateTime Date { get; set; }
+       public string Date { get; set; }
        public string Duration { get; set; }
        public string EventCoordinator { get; set; }
        public int NumberOfParticipants { get; set; }
