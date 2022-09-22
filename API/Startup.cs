@@ -50,6 +50,8 @@ namespace API
              // to the app.settingsdev.json ==> go there lol.. there we write our connection string
             
             });
+
+            // CORS in an ASP.NET Core app. Browser security prevents a web page from making requests to a different domain than the one that served the web page.//
             services.AddCors(opt =>
             {
                 opt.AddPolicy("CorsPolicy", policy =>
@@ -57,7 +59,7 @@ namespace API
                     policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:3000");
                 });
                 });
-
+                
                 services.AddMediatR(typeof(List.Handler).Assembly);
                 services.AddAutoMapper(typeof(MappingProfiles).Assembly);
         }

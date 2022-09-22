@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Domain;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace Persistance
 {
     public class DataContext : DbContext
@@ -21,6 +22,7 @@ namespace Persistance
         // we give it a name that is going to reflect our database table "Activities"
         
         public DbSet<Activity> Activities { get; set; }
+        public DbSet<Shirts> Shirt { get; set; }
 
     }
 }

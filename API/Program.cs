@@ -49,7 +49,7 @@ namespace API
               logger.LogError(ex, "An error occured during migration");
             }
             await host1.RunAsync();
-
+                //Logger is used for creating customized error log files//
 
         }
 

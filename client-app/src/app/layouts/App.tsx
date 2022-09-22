@@ -6,6 +6,12 @@ import ActivityDashboard from '../../features/activities/dashboard/ActivityDashb
 import { Container } from 'semantic-ui-react';
 import {v4 as uuid} from 'uuid';
 import {ActivitiesService} from '../api/agent';
+import { Route, useLocation } from 'react-router-dom';
+
+
+
+
+
 
 
 function App() {
@@ -14,6 +20,7 @@ function App() {
   const [editMode, setEditMode] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [signUp, setSignUp] = useState(false);
+  const [login, setLogin] = useState(false);
 
 
   useEffect(() => {
@@ -49,6 +56,15 @@ function App() {
     setEditMode(false);
   }
 
+  function handleLogin(){
+    setLogin(true);
+  }
+
+  function handleLoginClose(){
+    setLogin(false);
+  }
+  
+
   function handleCreateOrEditActivity(activity: Activity){
     setSubmitting(true);
     if(activity.id) {
@@ -76,13 +92,14 @@ function App() {
     setActivities([...activities.filter(x => x.id !== id)])
   }
 
-
   
+
   return (
+
  
     <>
       
-      <NavBar openForm={handleFormOpen} signUp={handleSignUp} />
+      <NavBar openForm={handleFormOpen} signUp={handleSignUp} login={handleLogin}/>
         <Container>
      <ActivityDashboard 
      activities={activities} 
@@ -96,6 +113,8 @@ function App() {
      deleteActivity={handleDeleteActivity}
      signUp={signUp}
      handleSignUpClose={handleSignUpClose}
+     login={login}
+     handleLoginClose={handleLoginClose}
      />
      </Container>
 
@@ -103,10 +122,12 @@ function App() {
     </>
     
 
-  
+
   );
   } 
- 
+
+
+
 
 
 

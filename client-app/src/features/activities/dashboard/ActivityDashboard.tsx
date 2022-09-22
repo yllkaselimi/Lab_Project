@@ -5,6 +5,7 @@ import ActivityDetails from '../details/ActivityDetails';
 import ActivityForm from '../form/ActivityForm';
 import ActivityList from './ActivityList';
 import SignUpForm from '../form/SignUpForm';
+import LoginForm from '../form/LoginForm';
 
 interface Props {
     activities: Activity[];
@@ -18,10 +19,12 @@ interface Props {
     deleteActivity: (id: string) => void;
     signUp: boolean;
     handleSignUpClose: () => void;
+    login: boolean;
+    handleLoginClose: () => void;
 }
 
 export default function ActivityDashboard({activities, selectedActivity, selectActivity, cancelSelectActivity,
-          editMode, openForm, closeForm, createOrEdit, deleteActivity, signUp, handleSignUpClose}: Props) {
+          editMode, openForm, closeForm, createOrEdit, deleteActivity, signUp, handleSignUpClose, login, handleLoginClose}: Props) {
     return (
 
         <Grid>
@@ -49,6 +52,11 @@ export default function ActivityDashboard({activities, selectedActivity, selectA
                 <SignUpForm
                     handleSignUpClose={handleSignUpClose}
                 />
+                }
+                {login && 
+                <LoginForm
+                     handleLoginClose={handleLoginClose}
+                 />
                 }
             </GridColumn>
         </Grid>
