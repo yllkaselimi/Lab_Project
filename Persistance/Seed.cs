@@ -13,7 +13,8 @@ namespace Persistance
         {
             // what this line of code does is that it tells us if we have context
             // inside our Activities database and we return it.
-            if (context.Activities.Any()) return; 
+   
+           
         
            
             
@@ -21,9 +22,6 @@ namespace Persistance
             // a new list of activities and stores it in the variable "new Activity"
             var activities = new List<Activity>()
          
-            
-
-          
             {
                 new Activity
                 {
@@ -83,16 +81,48 @@ namespace Persistance
                     EventCoordinator = "Anda Selimi",
                     NumberOfParticipants = 35,
 
-                }
+                },
+
 
             };
 
             
+             var equipments = new List<Equipment>()
+             {
+                  new Equipment
+                {
+                    Type = "Resistance Band",
+                    Category = "Yoga",
+                    Description = "All types of band strength",
+                    Availability = 12,
+                    
+                },
+                    new Equipment
+                {
+                    Type = "Dumbbell",
+                    Category = "Pilates",
+                    Description = "Different Weights",
+                    Availability = 20,
+
+                }
+             };
+
+            
+        
+           if(!context.Activities.Any()){
+               await context.Activities.AddRangeAsync(activities);
+           }
+
+           if(!context.Equipments.Any()){
+               await context.Equipments.AddRangeAsync(equipments);
+           }
+           // if (context.Activities.Any()) return; 
+           // if (context.Equipments.Any()) return;
             // then what we do is we add these these activities using the range method,
             // and then we use the other line of code to actually save the changes to the database.
             // now we go and make the use of this method inside our program class.
 
-            await context.Activities.AddRangeAsync(activities);
+       
 
 
             await context.SaveChangesAsync();

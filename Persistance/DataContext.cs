@@ -6,6 +6,7 @@ using Domain;
 using Microsoft.EntityFrameworkCore;
 
 
+
 namespace Persistance
 {
     public class DataContext : DbContext
@@ -23,6 +24,7 @@ namespace Persistance
         
         public DbSet<Activity> Activities { get; set; }
         public DbSet<Shirts> Shirt { get; set; }
+        public DbSet<Equipment> Equipments { get; set; }
 
     }
 }
