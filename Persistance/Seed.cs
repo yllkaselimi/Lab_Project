@@ -107,6 +107,50 @@ namespace Persistance
                 }
              };
 
+             var shirts = new List<Shirts>()
+             {
+            new Shirts
+              {
+                  Type = "Gym Logo Shirt",
+                  Color = "Black",
+                  Size = "XS, S, M, L, XL, XXL",
+                  Description = "Cotton",
+                  Quantity = 100,
+              },
+            new Shirts
+              {
+                  Type = "Gym Logo Shirt",
+                  Color = "White",
+                  Size = "XS, S, M, L, XL, XXL",
+                  Description = "Cotton",
+                  Quantity = 100,
+              },
+            new Shirts
+              {
+                  Type = "Gym Logo Shirt",
+                  Color = "Pink",
+                  Size = "XS, S, M, L, XL, XXL",
+                  Description = "Cotton",
+                  Quantity = 100,
+              },
+            new Shirts
+              {
+                  Type = "Gym Logo Shirt",
+                  Color = "Blue",
+                  Size = "XS, S, M, L, XL, XXL",
+                  Description = "Cotton",
+                  Quantity = 100,
+              },
+            new Shirts
+              {
+                  Type = "Gym Logo Shirt",
+                  Color = "Green",
+                  Size = "XS, S, M, L, XL, XXL",
+                  Description = "Cotton",
+                  Quantity = 100,
+              }
+             };
+
             
         
            if(!context.Activities.Any()){
@@ -116,11 +160,15 @@ namespace Persistance
            if(!context.Equipments.Any()){
                await context.Equipments.AddRangeAsync(equipments);
            }
-           // if (context.Activities.Any()) return; 
-           // if (context.Equipments.Any()) return;
-            // then what we do is we add these these activities using the range method,
-            // and then we use the other line of code to actually save the changes to the database.
-            // now we go and make the use of this method inside our program class.
+
+           if(!context.Shirt.Any()){
+               await context.Shirt.AddRangeAsync(shirts);
+           }
+             // if (context.Activities.Any()) return; 
+             // if (context.Equipments.Any()) return;
+             // then what we do is we add these these activities using the range method,
+             // and then we use the other line of code to actually save the changes to the database.
+             // now we go and make the use of this method inside our program class.
 
        
 
