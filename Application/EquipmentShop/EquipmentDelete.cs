@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MediatR;
 using Persistance;
 
-namespace Application.Activities
+namespace Application.EquipmentShop
 {
     public class EquipmentDelete
     {

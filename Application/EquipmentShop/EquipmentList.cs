@@ -5,18 +5,18 @@ using System.Threading;
 using System.Threading.Tasks;
 using Domain;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Persistance;
 
 namespace Application.EquipmentShop
 {
     public class EquipmentList
     {
-        public class Command : IRequest
-        {
-            public Equipment Equipment { get; set; }
+        public class Query : IRequest<List<Equipment>> {
+            public Equipment Params { get; set; }
         }
 
-        public class Handler : IRequestHandler<Command>
+        public class Handler : IRequestHandler<Query, List<Equipment>>
         {
         private readonly DataContext context;
             public Handler(DataContext context)
@@ -24,13 +24,9 @@ namespace Application.EquipmentShop
             this.context = context;
             }
 
-            public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
+            public async Task<List<Equipment>> Handle(Query request, CancellationToken cancellationToken)
             {
-                context.Equipments.Add(request.Equipment);
-
-                await context.SaveChangesAsync();
-
-                return Unit.Value;
+                return await context.Equipments.ToListAsync();
             }
         }
     }

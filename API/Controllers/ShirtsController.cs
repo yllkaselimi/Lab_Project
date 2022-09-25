@@ -6,22 +6,47 @@ using Domain;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Persistance;
+using Application.ShirtShop;
 
 
 namespace API.Controllers
 {
     public class ShirtsController : BaseAPIController
     {
-        private readonly DataContext context;
+        [HttpGet("/api/ShirtsList")]
+        public async Task<ActionResult<List<Shirts>>> GetShirts()
+        {
+            return await Mediator.Send(new ShirtList.Query());
+        }
+        [HttpGet("api/{id}")] // activities/id
+        public async Task<ActionResult<Shirts>> GetShirts(Guid id)
+        {
+            return await Mediator.Send(new ShirtDetails.Query{Id = id});    
+        }
+        //doesnt work aaaa
 
-       public ShirtsController(DataContext context)
-       {
-            this.context = context;
+        [HttpPost("/api/CreateShirt")]
+        public async Task<IActionResult> CreateShirts(Shirts shirts)
+        {
 
-       }
+            return Ok(await Mediator.Send(new ShirtCreate.Command{Shirts = shirts}));
+        }
 
+        [HttpPut("/api/EditShirt/{id}")]
+        public async Task<IActionResult> EditShirts(Guid id, Shirts shirts)
+        {
+            shirts.id = id;
+            return Ok(await Mediator.Send(new ShirtEdit.Command{Shirts = shirts }));
+        }
+
+        [HttpDelete("/api/DeleteShirt/{id}")]
+        public async Task<IActionResult> DeleteShirt(Guid id)
+        {
+            return Ok(await Mediator.Send(new ShirtDelete.Command{Id = id}));
 
     }
+
+    // doesnt work :((
 }
 
-
+}

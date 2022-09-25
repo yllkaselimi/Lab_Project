@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import { Button, Container, Menu, MenuItem } from 'semantic-ui-react'
+import React, {useState} from 'react'
+import { Button, Container, Menu, MenuItem} from 'semantic-ui-react'
 import {
     BrowserRouter as Router,
     Route,
@@ -20,13 +20,13 @@ interface Props {
 }
     
 export default function NavBar({openForm, signUp, login} : Props) {
+    const [SideBar, setSideBar] = useState(false)
 
+    const showSidebar = () => setSideBar(!SideBar)
     return (
-
-       
-      
         <Menu inverted fixed='top'>
             <Container>
+                
                 <Menu.Item header>
                     <img src="/images/death-star.png" alt="logo" style={{marginRight: '10px'}}/>
                     
@@ -52,10 +52,12 @@ export default function NavBar({openForm, signUp, login} : Props) {
                 <Menu.Item>
                     <Button onClick={login} content="Login" color='blue'/>
                 </Menu.Item>
+
+       
         
             </Container>
         </Menu>
-
+   
 
     )
 }

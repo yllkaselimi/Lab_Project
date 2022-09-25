@@ -3,7 +3,7 @@ import { Activity } from '../models/activity';
 import './styles.css';
 import NavBar from './NavBar';
 import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard';
-import { Container } from 'semantic-ui-react';
+import { Button, Container } from 'semantic-ui-react';
 import {v4 as uuid} from 'uuid';
 import {ActivitiesService} from '../api/agent';
 import { Route, useLocation } from 'react-router-dom';
@@ -115,6 +115,7 @@ function App() {
      handleSignUpClose={handleSignUpClose}
      login={login}
      handleLoginClose={handleLoginClose}
+
      />
      </Container>
 
