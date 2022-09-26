@@ -18,8 +18,8 @@ namespace API.Controllers
         {
             return await Mediator.Send(new ShirtList.Query());
         }
-        [HttpGet("api/{id}")] // activities/id
-        public async Task<ActionResult<Shirts>> GetShirts(Guid id)
+        [HttpGet("api/shirt/{id}")] // activities/id
+        public async Task<ActionResult<Shirts>> GetShirt(Guid id)
         {
             return await Mediator.Send(new ShirtDetails.Query{Id = id});    
         }

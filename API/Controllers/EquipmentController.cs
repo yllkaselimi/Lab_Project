@@ -41,7 +41,6 @@ using System;
             equipment.Id = id;
             return Ok(await Mediator.Send(new EquipmentEdit.Command{Equipment = equipment }));
         }
-     // doesnt work :((
         
         [HttpDelete("/api/DeleteEquipment/{id}")]
         public async Task<IActionResult> DeleteEquipment(Guid id)

@@ -25,6 +25,7 @@ namespace Persistance
         public DbSet<Activity> Activities { get; set; }
         public DbSet<Shirts> Shirt { get; set; }
         public DbSet<Equipment> Equipments { get; set; }
+        public DbSet<Staff> Staffs { get; set; }
 
     }
 }

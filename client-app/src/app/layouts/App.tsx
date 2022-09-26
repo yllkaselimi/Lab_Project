@@ -14,6 +14,7 @@ import { Route, useLocation } from 'react-router-dom';
 
 
 
+
 function App() {
   const [activities, setActivities] = useState<Activity[]>([]);
   const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined); 
@@ -116,8 +117,11 @@ function App() {
      login={login}
      handleLoginClose={handleLoginClose}
 
+
      />
+
      </Container>
+
 
 
     </>

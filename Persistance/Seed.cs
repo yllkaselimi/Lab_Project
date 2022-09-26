@@ -150,7 +150,38 @@ namespace Persistance
                   Quantity = 100,
               }
              };
+             
 
+           var staffs = new List<Staff>(){
+
+            new Staff
+             {
+                  Name = "Yllka Selimi",
+                  Trainer = "KickBox",
+                  Description = "kickyyboxi",
+                  Contact = 049502085,
+                  Email = "yllka.selimi@gmail.com",
+             },
+
+                 new Staff
+             {
+                  Name = "Rita Selimi",
+                  Trainer = "Kangoo",
+                  Description = "i love kangoo",
+                  Contact = 049234534,
+                  Email = "rita.selimi@gmail.com",
+             },
+
+                  new Staff
+             {
+                  Name = "Anda Selimi",
+                  Trainer = "Pilates",
+                  Description = "weeee",
+                  Contact = 049120778,
+                  Email = "anda.selimi@gmail.com",
+             },
+           };
+            
             
         
            if(!context.Activities.Any()){
@@ -163,6 +194,11 @@ namespace Persistance
 
            if(!context.Shirt.Any()){
                await context.Shirt.AddRangeAsync(shirts);
+           }
+            
+           if(!context.Staffs.Any()){
+               await context.Staffs.AddRangeAsync(staffs);
+
            }
              // if (context.Activities.Any()) return; 
              // if (context.Equipments.Any()) return;
