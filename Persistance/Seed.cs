@@ -181,6 +181,34 @@ namespace Persistance
                   Email = "anda.selimi@gmail.com",
              },
            };
+
+           var protein = new List<Protein>()
+           {
+                    new Protein
+             {
+                  Name = "Protein",
+                  Flavor = "Chocolate",
+                  Description = "weeee",
+                  Quantity = "In stock"
+             },
+
+                    new Protein
+             {
+                  Name = "Proteini",
+                  Flavor = "Chocolate",
+                  Description = "weeee",
+                  Quantity = "In stock"
+             },
+
+                    new Protein
+             {
+                  Name = "Proteinii",
+                  Flavor = "Chocolate",
+                  Description = "weeee",
+                  Quantity = "In stock"
+             },
+
+           };
             
             
         
@@ -198,8 +226,13 @@ namespace Persistance
             
            if(!context.Staffs.Any()){
                await context.Staffs.AddRangeAsync(staffs);
-
            }
+
+           if(!context.Proteins.Any()){
+               await context.Proteins.AddRangeAsync(protein);
+           } 
+
+           
              // if (context.Activities.Any()) return; 
              // if (context.Equipments.Any()) return;
              // then what we do is we add these these activities using the range method,

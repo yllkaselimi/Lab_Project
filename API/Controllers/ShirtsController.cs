@@ -18,12 +18,11 @@ namespace API.Controllers
         {
             return await Mediator.Send(new ShirtList.Query());
         }
-        [HttpGet("api/shirt/{id}")] // activities/id
+        [HttpGet("/api/shirtid/{id}")] // activities/id
         public async Task<ActionResult<Shirts>> GetShirt(Guid id)
         {
             return await Mediator.Send(new ShirtDetails.Query{Id = id});    
         }
-        //doesnt work aaaa
 
         [HttpPost("/api/CreateShirt")]
         public async Task<IActionResult> CreateShirts(Shirts shirts)
@@ -39,14 +38,15 @@ namespace API.Controllers
             return Ok(await Mediator.Send(new ShirtEdit.Command{Shirts = shirts }));
         }
 
-        [HttpDelete("/api/DeleteShirt/{id}")]
+        [HttpDelete("/api/deleteshirt/{id}")]
         public async Task<IActionResult> DeleteShirt(Guid id)
         {
             return Ok(await Mediator.Send(new ShirtDelete.Command{Id = id}));
 
-    }
+        }
+         //??
 
-    // doesnt work :((
+    
 }
 
 }
