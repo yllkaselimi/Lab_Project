@@ -1,7 +1,8 @@
 import React from "react";
 import { Button, Container, Divider } from "semantic-ui-react";
 import NavBar from "../app/layouts/NavBar";
-import ActivityDashboard from "../features/activities/dashboard/ActivityDashboard";
+
+
 
   
 const About = () => {
@@ -10,7 +11,7 @@ const About = () => {
   return (
 
   <><NavBar /><div>
-        
+
           <Container textAlign='center'><h1>Fitness Star</h1></Container>
           
           <Container textAlign='justified'>

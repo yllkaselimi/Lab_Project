@@ -30,14 +30,11 @@ namespace Application.MeetStaff
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
             {
                 var staff = await context.Staffs.FindAsync(request.Staff.Id);
-                // instead of setting each property manually like this
-                //activity.Title = request.Activity.Title ?? activity.Title;
-                // we use automapper
+          
 
                 mapper.Map(request.Staff, staff);
 
-                // so now when we do update our activity we update every field
-                // so it wont take a lot of manual writing code
+
 
                 await context.SaveChangesAsync();
 

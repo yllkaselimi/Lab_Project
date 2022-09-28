@@ -16,7 +16,7 @@ export default function ActivityDetails({activity, cancelSelectActivity, openFor
             <Card.Content>
             <Card.Header>{activity.title}</Card.Header>
             <Card.Meta>
-                <span>{activity.date}</span>
+             {activity.date}
             </Card.Meta>
             <Card.Description>
                 Insert Description

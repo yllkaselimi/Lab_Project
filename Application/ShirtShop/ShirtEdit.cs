@@ -30,14 +30,8 @@ namespace Application.ShirtShop
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
             {
                 var shirts = await context.Shirt.FindAsync(request.Shirts.id);
-                // instead of setting each property manually like this
-                //activity.Title = request.Activity.Title ?? activity.Title;
-                // we use automapper
 
                 mapper.Map(request.Shirts, shirts);
-
-                // so now when we do update our activity we update every field
-                // so it wont take a lot of manual writing code
 
                 await context.SaveChangesAsync();
 

@@ -8,13 +8,6 @@ import {v4 as uuid} from 'uuid';
 import {ActivitiesService} from '../api/agent';
 import { Route, useLocation } from 'react-router-dom';
 
-
-
-
-
-
-
-
 function App() {
   const [activities, setActivities] = useState<Activity[]>([]);
   const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined); 
@@ -23,13 +16,13 @@ function App() {
   const [signUp, setSignUp] = useState(false);
   const [login, setLogin] = useState(false);
 
-
   useEffect(() => {
     ActivitiesService.Activities.list().then((response: any) =>{ 
       console.log('RESPONSE YLLKA: ', response); 
       setActivities(response);
     })
   }, [])
+
 
   function handleSelectActivity(id: string) {
     setSelectedActivity(activities.find(x => x.id === id));
@@ -96,10 +89,7 @@ function App() {
   
 
   return (
-
- 
     <>
-      
       <NavBar openForm={handleFormOpen} signUp={handleSignUp} login={handleLogin}/>
         <Container>
      <ActivityDashboard 
@@ -116,24 +106,13 @@ function App() {
      handleSignUpClose={handleSignUpClose}
      login={login}
      handleLoginClose={handleLoginClose}
-
-
-     />
+  
+    />
 
      </Container>
 
-
-
     </>
-    
-
-
   );
   } 
 
-
-
-
-
-
-export default App;
+      export default App;

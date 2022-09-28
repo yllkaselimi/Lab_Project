@@ -10,6 +10,8 @@ import {
   BrowserRouter
 } from "react-router-dom";
 import About from './pages/about';
+import EquipmentPage from './app/layouts/EquipmentPage';
+
 
 
 const root = ReactDOM.createRoot(
@@ -24,6 +26,7 @@ const YllkaRoutes = () => {
         <Route path="/about" element={<About/>} />
         <Route path="/second" element={<div>yllka</div>} />
         <Route path="/" element={ <App />} />
+        <Route path="/equipment" element={<EquipmentPage />} />
       </Routes>
     </div>
    </BrowserRouter>

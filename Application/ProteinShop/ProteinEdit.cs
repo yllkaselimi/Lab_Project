@@ -30,14 +30,8 @@ namespace Application.ProteinShop
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
             {
                 var protein = await context.Proteins.FindAsync(request.Protein.id);
-                // instead of setting each property manually like this
-                //activity.Title = request.Activity.Title ?? activity.Title;
-                // we use automapper
 
                 mapper.Map(request.Protein, protein);
-
-                // so now when we do update our activity we update every field
-                // so it wont take a lot of manual writing code
 
                 await context.SaveChangesAsync();
 
