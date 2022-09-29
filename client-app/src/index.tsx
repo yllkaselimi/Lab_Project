@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import About from './pages/about';
 import EquipmentPage from './app/layouts/EquipmentPage';
+import StaffPage from './app/layouts/StaffPage';
 
 
 
@@ -24,9 +25,9 @@ const YllkaRoutes = () => {
     <div>
       <Routes>
         <Route path="/about" element={<About/>} />
-        <Route path="/second" element={<div>yllka</div>} />
         <Route path="/" element={ <App />} />
         <Route path="/equipment" element={<EquipmentPage />} />
+        <Route path="/staff" element={<StaffPage />} />
       </Routes>
     </div>
    </BrowserRouter>

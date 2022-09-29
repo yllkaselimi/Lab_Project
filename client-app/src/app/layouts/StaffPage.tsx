@@ -4,18 +4,19 @@ import NavBar from './NavBar';
 import { Button, Container, Divider, List } from 'semantic-ui-react';
 import {v4 as uuid} from 'uuid';
 import { Route, useLocation } from 'react-router-dom';
-import { Equipment } from '../models/equipments';
+import { Staff } from '../models/staff';
 import axios from 'axios';
-import EquipmentDashboard from '../../features/equipments/equipmentDashboard/EquipmentDashboard';
+import StaffDashboard from '../../features/staff/StaffDashboard';
 
 
-function EquipmentPage() {
-    const [equipments, setEquipments] = useState<Equipment[]>([]);
+
+function StaffPage() {
+    const [staffs, setStaffs] = useState<Staff[]>([]);
 
 
 useEffect(() =>{
-    axios.get<Equipment[]>('http://localhost:5000/api/EquipmentList').then(response => {
-        setEquipments(response.data);
+    axios.get<Staff[]>('http://localhost:5000/api/StaffList').then(response => {
+        setStaffs(response.data);
     }
     )
 } )
@@ -31,14 +32,15 @@ useEffect(() =>{
             throw new Error('Function not implemented.');
         } } /><div>
     </div>
-      
-      <Container style ={{marginTop: '7em'}}>
-          <EquipmentDashboard equipments={equipments} />
+    
+
+    <Container style ={{marginTop: '7em'}}>
+          <StaffDashboard staffs={staffs} />
       </Container>
     
+    
     </>
-
     );
 }
 
-export default EquipmentPage;
+export default StaffPage;

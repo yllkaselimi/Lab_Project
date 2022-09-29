@@ -17,6 +17,11 @@ import React from 'react'
      path: '/equipment',
      cName: 'nav-text'
   },
+  {
+   title: 'Staff',
+   path: '/staff',
+   cName: 'nav-text'
+},
  ]
 
 

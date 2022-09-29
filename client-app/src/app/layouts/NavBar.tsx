@@ -32,7 +32,7 @@ export default function NavBar({openForm, signUp, login} : Props) {
                     <ul className='nav-menu-items'>
                        <li className="navbar-toggle">
                         <Link to="#" className='menu-bars'>
-                            <AiIcons.AiOutlineClose />
+                            <AiIcons.AiOutlineClose/>
                         </Link>
                         </li> 
                         {SideBarData.map((item, indexi) => {
