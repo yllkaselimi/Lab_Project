@@ -30,7 +30,7 @@ useEffect(() =>{
             throw new Error('Function not implemented.');
         } } login={function (): void {
             throw new Error('Function not implemented.');
-        } } /><div>
+        } } loggedIn="" /><div>
     </div>
     
 

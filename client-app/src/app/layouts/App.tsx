@@ -15,6 +15,13 @@ function App() {
   const [submitting, setSubmitting] = useState(false);
   const [signUp, setSignUp] = useState(false);
   const [login, setLogin] = useState(false);
+  const [loggedIn, setLoggedIn] = useState('');
+  const initialState =  {
+    email: '',
+    password: ''
+}
+  const [user, setUser] = useState(initialState);
+
 
   useEffect(() => {
     ActivitiesService.Activities.list().then((response: any) =>{ 
@@ -90,7 +97,7 @@ function App() {
 
   return (
     <>
-      <NavBar openForm={handleFormOpen} signUp={handleSignUp} login={handleLogin}/>
+      <NavBar openForm={handleFormOpen} signUp={handleSignUp} login={handleLogin} loggedIn={loggedIn}/>
         <Container>
      <ActivityDashboard 
      activities={activities} 
@@ -106,7 +113,10 @@ function App() {
      handleSignUpClose={handleSignUpClose}
      login={login}
      handleLoginClose={handleLoginClose}
-  
+     user={user}
+     setUser={setUser}
+     loggedIn={loggedIn}
+     setLoggedIn={setLoggedIn}
     />
 
      </Container>

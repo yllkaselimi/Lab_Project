@@ -9,8 +9,8 @@ using Persistance;
 namespace Persistance.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220929203143_CreateUsers")]
-    partial class CreateUsers
+    [Migration("20221001154824_SixthCreate")]
+    partial class SixthCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -140,6 +140,32 @@ namespace Persistance.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Staffs");
+                });
+
+            modelBuilder.Entity("Domain.User", b =>
+                {
+                    b.Property<Guid>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Age")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Surname")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }
