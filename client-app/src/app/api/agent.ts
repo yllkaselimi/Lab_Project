@@ -14,7 +14,6 @@ const request = {
 }
 
 
-
 const deleteActivity = (id: number | string) => {
     return request.del<any>(`/activities/${id}`);
 }

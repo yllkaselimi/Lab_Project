@@ -1,5 +1,6 @@
 
 import { Button, Form, Segment } from 'semantic-ui-react';
+import { User } from '../../../app/models/user';
 
 interface Props {
     handleSignUpClose: () => void;

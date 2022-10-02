@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.helpers;
+using API.Helpers;
+using API.Services;
 using Application.Activities;
 using Application.Core;
 using MediatR;
@@ -59,6 +62,12 @@ namespace API
                     policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:3000");
                 });
                 });
+            
+                 // configure strongly typed settings object
+                services.Configure<AppSettings>(config.GetSection("AppSettings"));
+
+                // configure DI for application services
+                services.AddScoped<IUserService, UserService>();
                 
                 services.AddMediatR(typeof(List.Handler).Assembly);
                 services.AddAutoMapper(typeof(MappingProfiles).Assembly);
@@ -77,10 +86,10 @@ namespace API
             // app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            app.UseCors("CorsPolicy");
-
             app.UseAuthorization();
+            app.UseCors("CorsPolicy");
+            app.UseMiddleware<JwtMiddleware>();
+            app.UseEndpoints(x => x.MapControllers());
 
             app.UseEndpoints(endpoints => {
                 endpoints.MapControllers();

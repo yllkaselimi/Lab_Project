@@ -18,8 +18,10 @@ const About = () => {
               <b><h2>about</h2></b>
               <Divider />
               <p>
-              FitnessStar is an app that lets you create your own personal account to join activities online, buy our personalised fitness shirts and more..
+              FitnessStar is an app that lets you create your own personal account to join activities online, buy our personalised fitnes shirts and more..
               </p>     
+              <Divider />
+              
           </Container>
       </div></>
 

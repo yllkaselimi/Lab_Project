@@ -18,14 +18,14 @@ function App() {
   const [loggedIn, setLoggedIn] = useState('');
   const initialState =  {
     email: '',
-    password: ''
+    password: '',
+    role: ''
 }
   const [user, setUser] = useState(initialState);
 
 
   useEffect(() => {
     ActivitiesService.Activities.list().then((response: any) =>{ 
-      console.log('RESPONSE YLLKA: ', response); 
       setActivities(response);
     })
   }, [])
@@ -78,18 +78,21 @@ function App() {
       })
     } else {
       activity.id = uuid();
-      ActivitiesService.Activities.create(activity).then(() => {
-      setActivities([...activities, activity]);
-      setSelectedActivity(activity);
-      setEditMode(false);
-      setSubmitting(false);
-      })
+      if(user?.role === "admin"){
+        ActivitiesService.Activities.create(activity).then(() => {
+          setActivities([...activities, activity]);
+          setSelectedActivity(activity);
+          setEditMode(false);
+          setSubmitting(false);
+          })
+      }else{
+        alert("You don't have permission to create Activities")
+      }
     }
   }
 
   function handleDeleteActivity(id: string) {
     const response = ActivitiesService.deleteActivity(id);
-    console.log('Response: ', response);
     setActivities([...activities.filter(x => x.id !== id)])
   }
 
@@ -114,6 +117,7 @@ function App() {
      login={login}
      handleLoginClose={handleLoginClose}
      user={user}
+     
      setUser={setUser}
      loggedIn={loggedIn}
      setLoggedIn={setLoggedIn}

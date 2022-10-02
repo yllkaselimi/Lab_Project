@@ -3,29 +3,30 @@ import { Button, Form, Segment } from 'semantic-ui-react';
 import axios, { AxiosResponse } from 'axios';
 import React, { ChangeEvent, useState } from 'react';
 import { User } from '../../../app/models/user';
-
-
+import jwt_decode from "jwt-decode";
 
 interface Props {
     handleLoginClose: () => void;
     user: User;
     setUser: (user: User) => void;
     loggedIn: any
+    role?: string,
     setLoggedIn: any
 }
  
-export default function LoginForm({user, setUser, handleLoginClose, loggedIn, setLoggedIn}: Props) {
+export default function LoginForm({ user, setUser, handleLoginClose, role, loggedIn, setLoggedIn}: Props) {
 
     const initialState =  {
         email: '',
-        password: ''
+        password: '',
+        role: '',
     }
 
     function handleLoginSubmit(){
         console.log(user)
         const options = {
             method: 'POST',
-            url: 'http://localhost:5000/api/login',
+            url: 'http://localhost:5000/api/authenticate',
             headers: {'Content-Type': 'application/json'},
             data: user
           };
@@ -33,6 +34,11 @@ export default function LoginForm({user, setUser, handleLoginClose, loggedIn, se
         axios.request(options).then(function (response) {
             if(response.data){
                 alert("Logged In")
+                const decodedToken: any = jwt_decode(response.data.token);
+                setUser({
+                    ...user,
+                    role: decodedToken.role
+                });
                 setLoggedIn(response.data.email)
                 handleLoginClose();
             }else{
@@ -59,7 +65,7 @@ export default function LoginForm({user, setUser, handleLoginClose, loggedIn, se
                 <Form.Input placeholder='Email' name='email' onChange={handleInputChange}/>
                 <Form.Input placeholder='Password' name='password' type="password" onChange={handleInputChange}/>
                 <Button onClick={handleLoginClose} floated='right' type='button' content='Cancel' />
-                <Button onClick={handleLoginSubmit} floated='left' type='button' content='Submit' color="pink" />
+                <Button onClick={handleLoginSubmit} floated='left' type='button' content='Submit' color="violet" />
             </Form>
         </Segment>
     )

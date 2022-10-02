@@ -162,6 +162,8 @@ namespace Persistance.Migrations
 
                     b.Property<string>("Surname")
                         .HasColumnType("TEXT");
+                      b.Property<string>("Role")
+                        .HasColumnType("TEXT");    
 
                     b.HasKey("id");
 

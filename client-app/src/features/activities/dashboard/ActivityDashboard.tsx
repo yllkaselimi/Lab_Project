@@ -73,6 +73,7 @@ export default function ActivityDashboard({activities, selectedActivity, selectA
                     setUser={setUser}
                      handleLoginClose={handleLoginClose}
                      loggedIn = {loggedIn}
+              
                      setLoggedIn = {setLoggedIn}
                  />
                 }

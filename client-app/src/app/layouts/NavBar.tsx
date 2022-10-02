@@ -31,7 +31,7 @@ export default function NavBar({openForm, signUp, login, loggedIn} : Props) {
                     </button>
                 </div> : <></>
                 }
-
+                
                 <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                     <ul className='nav-menu-items'>
                        <li className="navbar-toggle">
